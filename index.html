@@ -20,21 +20,20 @@
 
     <section class="main-content">
       <h1>
-<a id="vobject" class="anchor" href="#vobject" aria-hidden="true"><span class="octicon octicon-link"></span></a>VObject</h1>
+<a id="about-vobject" class="anchor" href="#about-vobject" aria-hidden="true"><span class="octicon octicon-link"></span></a>About VObject</h1>
 
-<p>VObject simplifies the process of parsing and creating iCalendar and vCard objects.</p>
+<p>VObject is intended to be a full featured Python package for parsing and generating vCard and vCalendar files. It was originally developed in concert with the Open Source Application Foundation's Chandler project by Jeffrey Harris. The project is currently being maintained by <a href="https://github.com/eventable">Eventable</a> and <a href="https://github.com/skarim">Sameen Karim</a>.</p>
 
-<p>VObject is intended to be a full featured Python package for parsing and generating vCard and vCalendar files. It was originally developed in concert with the Open Source Application Foundation's Chandler project by Jeffrey Harris and Cyrus Daboo. The project is currently being maintained by <a href="https://github.com/eventable">Eventable</a> and <a href="https://github.com/skarim">Sameen Karim</a>.</p>
+<p>Currently, iCalendar files are supported and well tested. vCard 3.0 files are supported, and all data should be imported, but only a few components are understood in a sophisticated way. The <a href="http://calendarserver.org/">Calendar Server</a> team has added VAVAILABILITY support to VObject's iCalendar parsing. Please report bugs by creating a <a href="https://github.com/eventable/vobject/issues">ticket on GitHub</a>.</p>
 
-<p>Currently, iCalendar files are supported and well tested. vCard 3.0 files are supported, and all data should be imported, but only a few components are understood in a sophisticated way. The Calendar Server team has added VAVAILABILITY support to vobject's iCalendar parsing. Please report bugs by creating a <a href="https://github.com/eventable/vobject/issues">ticket on GitHub</a>.</p>
-
-<p>VObject is licensed under the Apache 2.0 license.</p>
+<p>VObject is licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 license</a>.</p>
 
 <p>Useful scripts included with VObject:</p>
 
 <ul>
 <li>ics_diff: order is irrelevant in iCalendar files, return a diff of meaningful changes between icalendar files</li>
-<li>change_tz: Take an iCalendar file with events in the wrong timezone, change all events or just UTC events into one of the timezones * PyICU supports. Requires PyICU.</li>
+<li>change_tz: Take an iCalendar file with events in the wrong timezone, change all events or just UTC events into one of the timezones </li>
+<li>PyICU supports. Requires PyICU.</li>
 </ul>
 
 <h1>
