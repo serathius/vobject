@@ -2,7 +2,7 @@
 <html lang="en-us">
   <head>
     <meta charset="UTF-8">
-    <title>vObject by eventable</title>
+    <title>vobject by eventable</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
@@ -11,8 +11,8 @@
   </head>
   <body>
     <section class="page-header">
-      <h1 class="project-name">vObject</h1>
-      <h2 class="project-tagline">vObject is a full featured Python package for parsing and generating vCard and vCalendar files</h2>
+      <h1 class="project-name">vobject</h1>
+      <h2 class="project-tagline">vobject is a full featured Python package for parsing and generating vCard and vCalendar files</h2>
       <a href="https://github.com/eventable/vobject" class="btn">View on GitHub</a>
       <a href="https://github.com/eventable/vobject/zipball/master" class="btn">Download .zip</a>
       <a href="https://github.com/eventable/vobject/tarball/master" class="btn">Download .tar.gz</a>
@@ -20,33 +20,38 @@
 
     <section class="main-content">
       <h1>
-<a id="vobject" class="anchor" href="#vobject" aria-hidden="true"><span class="octicon octicon-link"></span></a>vObject</h1>
+<a id="vobject" class="anchor" href="#vobject" aria-hidden="true"><span class="octicon octicon-link"></span></a>vobject</h1>
 
-<p>vObject simplifies the process of parsing and creating iCalendar and
+<p>vobject simplifies the process of parsing and creating iCalendar and
 vCard objects.</p>
 
-<h2>
-<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
+<h1>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h1>
 
-<p>To install vObject, run::</p>
+<p>To install vobject, run:</p>
 
-<p>python setup.py install</p>
+<pre><code>python setup.py install
+</code></pre>
 
 <p>vobject requires the dateutil package, which can be installed via
 easy_install or downloaded from <a href="http://labix.org/python-dateutil">http://labix.org/python-dateutil</a></p>
 
+<h1>
+<a id="running-tests" class="anchor" href="#running-tests" aria-hidden="true"><span class="octicon octicon-link"></span></a>Running tests</h1>
+
+<p>Unit tests live in doctests throughout the source code, to run all tests, use:</p>
+
+<pre><code>python tests/tests.py
+</code></pre>
+
+<h1>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h1>
+
 <h2>
-<a id="running-tests" class="anchor" href="#running-tests" aria-hidden="true"><span class="octicon octicon-link"></span></a>Running tests</h2>
+<a id="icalendar" class="anchor" href="#icalendar" aria-hidden="true"><span class="octicon octicon-link"></span></a>iCalendar</h2>
 
-<p>Unit tests live in doctests throughout the source code, to run all tests, use::</p>
-
-<p>python tests/tests.py</p>
-
-<h2>
-<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
-
-<p>Creating iCalendar objects
-..........................</p>
+<h4>
+<a id="creating-icalendar-objects" class="anchor" href="#creating-icalendar-objects" aria-hidden="true"><span class="octicon octicon-link"></span></a>Creating iCalendar objects</h4>
 
 <p>vobject has a basic datastructure for working with iCalendar-like
 syntaxes.  Additionally, it defines specialized behaviors for many of
@@ -54,48 +59,33 @@ the commonly used iCalendar objects.</p>
 
 <p>To create an object that already has a behavior defined, run:</p>
 
-<blockquote>
-<blockquote>
-<blockquote>
-<p>import vobject
-cal = vobject.newFromBehavior('vcalendar')
-cal.behavior
-</p>
-</blockquote>
-</blockquote>
-</blockquote>
+<pre><code>&gt;&gt;&gt; import vobject
+&gt;&gt;&gt; &amp;gt; cal = vobject.newFromBehavior('vcalendar')
+&gt;&gt;&gt; cal.behavior
+&lt;class 'vobject.icalendar.VCalendar2_0'&gt;
+</code></pre>
 
 <p>Convenience functions exist to create iCalendar and vCard objects:</p>
 
-<blockquote>
-<blockquote>
-<blockquote>
-<p>cal = vobject.iCalendar()
-cal.behavior
-
-card = vobject.vCard()
-card.behavior
-</p>
-</blockquote>
-</blockquote>
-</blockquote>
+<pre><code>&gt;&gt;&gt; cal = vobject.iCalendar()
+&gt;&gt;&gt; cal.behavior
+&lt;class 'vobject.icalendar.VCalendar2_0'&gt;
+&gt;&gt;&gt; card = vobject.vCard()
+&gt;&gt;&gt; card.behavior
+&lt;class 'vobject.vcard.VCard3_0'&gt;
+</code></pre>
 
 <p>Once you have an object, you can use the add method to create
 children:</p>
 
-<blockquote>
-<blockquote>
-<blockquote>
-<p>cal.add('vevent')
-
-cal.vevent.add('summary').value = "This is a note"
-cal.prettyPrint()
+<pre><code>&gt;&gt;&gt; cal.add('vevent')
+&lt;VEVENT| []&gt;
+&gt;&gt;&gt; cal.vevent.add('summary').value = "This is a note"
+&gt;&gt;&gt; cal.prettyPrint()
  VCALENDAR
     VEVENT
-       SUMMARY: This is a note</p>
-</blockquote>
-</blockquote>
-</blockquote>
+       SUMMARY: This is a note
+</code></pre>
 
 <p>Note that summary is a little different from vevent, it's a
 ContentLine, not a Component.  It can't have children, and it has a
@@ -104,19 +94,14 @@ special value attribute.</p>
 <p>ContentLines can also have parameters.  They can be accessed with
 regular attribute names with _param appended:</p>
 
-<blockquote>
-<blockquote>
-<blockquote>
-<p>cal.vevent.summary.x_random_param = 'Random parameter'
-cal.prettyPrint()
+<pre><code>&gt;&gt;&gt; cal.vevent.summary.x_random_param = 'Random parameter'
+&gt;&gt;&gt; cal.prettyPrint()
  VCALENDAR
     VEVENT
        SUMMARY: This is a note
        params for  SUMMARY:
-          X-RANDOM ['Random parameter']</p>
-</blockquote>
-</blockquote>
-</blockquote>
+          X-RANDOM ['Random parameter']
+</code></pre>
 
 <p>There are a few things to note about this example</p>
 
@@ -129,77 +114,52 @@ legal in iCalendar, underscores legal in Python)</li>
 <p>If you want to access the full list of parameters, not just the first,
 use _paramlist:</p>
 
-<blockquote>
-<blockquote>
-<blockquote>
-<p>cal.vevent.summary.x_random_paramlist
+<pre><code>&gt;&gt;&gt; cal.vevent.summary.x_random_paramlist
 ['Random parameter']
-cal.vevent.summary.x_random_paramlist.append('Other param')
-cal.vevent.summary
-<summary></summary></p>
-</blockquote>
-</blockquote>
-</blockquote>
+&gt;&gt;&gt; cal.vevent.summary.x_random_paramlist.append('Other param')
+&gt;&gt;&gt; cal.vevent.summary
+&lt;SUMMARY{'X-RANDOM': ['Random parameter', 'Other param']}This is a note&gt;
+</code></pre>
 
-<p>Similar to parameters, If you want to access more than just the first
-child of a Component, you can access the full list of children of a
-given name by appending _list to the attribute name:</p>
+<p>Similar to parameters, If you want to access more than just the first child of a Component, you can access the full list of children of a given name by appending _list to the attribute name:</p>
 
-<blockquote>
-<blockquote>
-<blockquote>
-<p>cal.add('vevent').add('summary').value = "Second VEVENT"
-for ev in cal.vevent_list:
+<pre><code>&gt;&gt;&gt; cal.add('vevent').add('summary').value = "Second VEVENT"
+&gt;&gt;&gt; for ev in cal.vevent_list:
 ...     print ev.summary.value
 This is a note
-Second VEVENT</p>
-</blockquote>
-</blockquote>
-</blockquote>
+Second VEVENT
+</code></pre>
 
 <p>The interaction between the del operator and the hiding of the
 underlying list is a little tricky, del cal.vevent and del
 cal.vevent_list both delete all vevent children:</p>
 
-<blockquote>
-<blockquote>
-<blockquote>
-<p>first_ev = cal.vevent
-del cal.vevent
-cal
-
-cal.vevent = first_ev</p>
-</blockquote>
-</blockquote>
-</blockquote>
+<pre><code>&gt;&gt;&gt; first_ev = cal.vevent
+&gt;&gt;&gt; del cal.vevent
+&gt;&gt;&gt; cal
+&lt;VCALENDAR| []&gt;
+&gt;&gt;&gt; cal.vevent = first_ev
+</code></pre>
 
 <p>vobject understands Python's datetime module and tzinfo classes.</p>
 
-<blockquote>
-<blockquote>
-<blockquote>
-<p>import datetime
-utc = vobject.icalendar.utc
-start = cal.vevent.add('dtstart')
-start.value = datetime.datetime(2006, 2, 16, tzinfo = utc)
-first_ev.prettyPrint()
+<pre><code>&gt;&gt;&gt; import datetime
+&gt;&gt;&gt; utc = vobject.icalendar.utc
+&gt;&gt;&gt; start = cal.vevent.add('dtstart')
+&gt;&gt;&gt; start.value = datetime.datetime(2006, 2, 16, tzinfo = utc)
+&gt;&gt;&gt; first_ev.prettyPrint()
      VEVENT
         DTSTART: 2006-02-16 00:00:00+00:00
         SUMMARY: This is a note
         params for  SUMMARY:
-           X-RANDOM ['Random parameter', 'Other param']</p>
-</blockquote>
-</blockquote>
-</blockquote>
+           X-RANDOM ['Random parameter', 'Other param']
+</code></pre>
 
 <p>Components and ContentLines have serialize methods:</p>
 
-<blockquote>
-<blockquote>
-<blockquote>
-<p>cal.vevent.add('uid').value = 'Sample UID'
-icalstream = cal.serialize()
-print icalstream
+<pre><code>&gt;&gt;&gt; cal.vevent.add('uid').value = 'Sample UID'
+&gt;&gt;&gt; icalstream = cal.serialize()
+&gt;&gt;&gt; print icalstream
 BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//PYVOBJECT//NONSGML Version 1//EN
@@ -208,10 +168,8 @@ UID:Sample UID
 DTSTART:20060216T000000Z
 SUMMARY;X-RANDOM=Random parameter,Other param:This is a note
 END:VEVENT
-END:VCALENDAR</p>
-</blockquote>
-</blockquote>
-</blockquote>
+END:VCALENDAR
+</code></pre>
 
 <p>Observe that serializing adds missing required lines like version and
 prodid.  A random UID would be generated, too, if one didn't exist.</p>
@@ -219,117 +177,94 @@ prodid.  A random UID would be generated, too, if one didn't exist.</p>
 <p>If dtstart's tzinfo had been something other than UTC, an appropriate
 vtimezone would be created for it.</p>
 
-<p>Parsing iCalendar objects
-.........................</p>
+<h4>
+<a id="parsing-icalendar-objects" class="anchor" href="#parsing-icalendar-objects" aria-hidden="true"><span class="octicon octicon-link"></span></a>Parsing iCalendar objects</h4>
 
 <p>To parse one top level component from an existing iCalendar stream or
 string, use the readOne function:</p>
 
-<blockquote>
-<blockquote>
-<blockquote>
-<p>parsedCal = vobject.readOne(icalstream)
-parsedCal.vevent.dtstart.value
-datetime.datetime(2006, 2, 16, 0, 0, tzinfo=tzutc())</p>
-</blockquote>
-</blockquote>
-</blockquote>
+<pre><code>&gt;&gt;&gt; parsedCal = vobject.readOne(icalstream)
+&gt;&gt;&gt; parsedCal.vevent.dtstart.value
+datetime.datetime(2006, 2, 16, 0, 0, tzinfo=tzutc())
+</code></pre>
 
-<p>Similarly, readComponents is a generator yielding one top level
-component at a time from a stream or string.</p>
+<p>Similarly, readComponents is a generator yielding one top level component at a time from a stream or string.</p>
 
-<blockquote>
-<blockquote>
-<blockquote>
-<p>vobject.readComponents(icalstream).next().vevent.dtstart.value
-datetime.datetime(2006, 2, 16, 0, 0, tzinfo=tzutc())</p>
-</blockquote>
-</blockquote>
-</blockquote>
+<pre><code>&gt;&gt;&gt; vobject.readComponents(icalstream).next().vevent.dtstart.value
+datetime.datetime(2006, 2, 16, 0, 0, tzinfo=tzutc())
+</code></pre>
 
 <p>More examples can be found in source code doctests.</p>
 
-<p>vCards
-......</p>
+<h2>
+<a id="vcards" class="anchor" href="#vcards" aria-hidden="true"><span class="octicon octicon-link"></span></a>vCards</h2>
+
+<h4>
+<a id="creating-vcard-objects" class="anchor" href="#creating-vcard-objects" aria-hidden="true"><span class="octicon octicon-link"></span></a>Creating vCard objects</h4>
 
 <p>Making vCards proceeds in much the same way. Note that the 'N' and 'FN'
 attributes are required.</p>
 
-<blockquote>
-<blockquote>
-<blockquote>
-<p>j = vobject.vCard()
-j.add('n')
- 
-j.n.value = vobject.vcard.Name( family='Harris', given='Jeffrey' )
-j.add('fn')
- 
-j.fn.value ='Jeffrey Harris'
-j.add('email')
- 
-j.email.value = '<a href="mailto:jeffrey@osafoundation.org">jeffrey@osafoundation.org</a>'
-j.email.type_param = 'INTERNET'
-j.prettyPrint()
+<pre><code>&gt;&gt;&gt; j = vobject.vCard()
+&gt;&gt;&gt; j.add('n')
+ &lt;N{}    &gt;
+&gt;&gt;&gt; j.n.value = vobject.vcard.Name( family='Harris', given='Jeffrey' )
+&gt;&gt;&gt; j.add('fn')
+ &lt;FN{}&gt;
+&gt;&gt;&gt; j.fn.value ='Jeffrey Harris'
+&gt;&gt;&gt; j.add('email')
+ &lt;EMAIL{}&gt;
+&gt;&gt;&gt; j.email.value = 'jeffrey@osafoundation.org'
+&gt;&gt;&gt; j.email.type_param = 'INTERNET'
+&gt;&gt;&gt; j.prettyPrint()
  VCARD
-    EMAIL: <a href="mailto:jeffrey@osafoundation.org">jeffrey@osafoundation.org</a>
+    EMAIL: jeffrey@osafoundation.org
     params for  EMAIL:
        TYPE ['INTERNET']
     FN: Jeffrey Harris
-    N:  Jeffrey  Harris</p>
-</blockquote>
-</blockquote>
-</blockquote>
+    N:  Jeffrey  Harris
+</code></pre>
 
 <p>serializing will add any required computable attributes (like 'VERSION')</p>
 
-<blockquote>
-<blockquote>
-<blockquote>
-<p>j.serialize()
-'BEGIN:VCARD\r\nVERSION:3.0\r\nEMAIL;TYPE=INTERNET:<a href="mailto:jeffrey@osafoundation.org">jeffrey@osafoundation.org</a>\r\nFN:Jeffrey Harris\r\nN:Harris;Jeffrey;;;\r\nEND:VCARD\r\n'
-j.prettyPrint()
+<pre><code>&gt;&gt;&gt; j.serialize()
+'BEGIN:VCARD\r\nVERSION:3.0\r\nEMAIL;TYPE=INTERNET:jeffrey@osafoundation.org\r\nFN:Jeffrey Harris\r\nN:Harris;Jeffrey;;;\r\nEND:VCARD\r\n'
+&gt;&gt;&gt; j.prettyPrint()
  VCARD
     VERSION: 3.0
-    EMAIL: <a href="mailto:jeffrey@osafoundation.org">jeffrey@osafoundation.org</a>
+    EMAIL: jeffrey@osafoundation.org
     params for  EMAIL:
        TYPE ['INTERNET']
     FN: Jeffrey Harris
-    N:  Jeffrey  Harris </p>
-</blockquote>
-</blockquote>
-</blockquote>
+    N:  Jeffrey  Harris 
+</code></pre>
 
-<p>Parsing vCards
-..............</p>
+<h4>
+<a id="parsing-vcard-objects" class="anchor" href="#parsing-vcard-objects" aria-hidden="true"><span class="octicon octicon-link"></span></a>Parsing vCard objects</h4>
 
-<blockquote>
-<blockquote>
-<blockquote>
-<p>s = """
+<pre><code>&gt;&gt;&gt; s = """
 ... BEGIN:VCARD
 ... VERSION:3.0
-... EMAIL;TYPE=INTERNET:<a href="mailto:jeffrey@osafoundation.org">jeffrey@osafoundation.org</a>
+... EMAIL;TYPE=INTERNET:jeffrey@osafoundation.org
 ... FN:Jeffrey Harris
 ... N:Harris;Jeffrey;;;
 ... END:VCARD
 ... """
-v = vobject.readOne( s )
-v.prettyPrint()
+&gt;&gt;&gt; v = vobject.readOne( s )
+&gt;&gt;&gt; v.prettyPrint()
  VCARD
     VERSION: 3.0
-    EMAIL: <a href="mailto:jeffrey@osafoundation.org">jeffrey@osafoundation.org</a>
+    EMAIL: jeffrey@osafoundation.org
     params for  EMAIL:
        TYPE [u'INTERNET']
     FN: Jeffrey Harris
     N:  Jeffrey  Harris
-v.n.value.family
-u'Harris'</p>
-</blockquote>
-</blockquote>
-</blockquote>
+&gt;&gt;&gt; v.n.value.family
+u'Harris'
+</code></pre>
 
       <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/eventable/vobject">vObject</a> is maintained by <a href="https://github.com/eventable">eventable</a>.</span>
+        <span class="site-footer-owner"><a href="https://github.com/eventable/vobject">vobject</a> is maintained by <a href="https://github.com/eventable">eventable</a>.</span>
 
         <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
       </footer>
