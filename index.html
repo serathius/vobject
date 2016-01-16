@@ -22,7 +22,7 @@
       <h1>
 <a id="about-vobject" class="anchor" href="#about-vobject" aria-hidden="true"><span class="octicon octicon-link"></span></a>About VObject</h1>
 
-<p>VObject is intended to be a full featured Python package for parsing and generating vCard and vCalendar files. It was originally developed in concert with the Open Source Application Foundation's Chandler project by Jeffrey Harris. The project is currently being maintained by <a href="https://github.com/eventable">Eventable</a> and <a href="https://github.com/skarim">Sameen Karim</a>.</p>
+<p>VObject is intended to be a full-featured Python package for parsing and generating vCard and vCalendar files. It was originally developed in concert with the Open Source Application Foundation's Chandler project by Jeffrey Harris. The project is currently being maintained by <a href="https://github.com/eventable">Eventable</a> and <a href="https://github.com/skarim">Sameen Karim</a>.</p>
 
 <p>Currently, iCalendar files are supported and well tested. vCard 3.0 files are supported, and all data should be imported, but only a few components are understood in a sophisticated way. The <a href="http://calendarserver.org/">Calendar Server</a> team has added VAVAILABILITY support to VObject's iCalendar parsing. Please report bugs and issues directly on <a href="https://github.com/eventable/vobject/issues">GitHub</a>.</p>
 
@@ -31,8 +31,10 @@
 <p>Useful scripts included with VObject:</p>
 
 <ul>
-<li>ics_diff: order is irrelevant in iCalendar files, return a diff of meaningful changes between icalendar files</li>
-<li>change_tz: Take an iCalendar file with events in the wrong timezone, change all events or just UTC events into one of the timezones PyICU supports. Requires <a href="https://pypi.python.org/pypi/PyICU/">PyICU</a>.</li>
+<li>
+<a href="https://github.com/eventable/vobject/blob/master/vobject/ics_diff.py">ics_diff</a>: order is irrelevant in iCalendar files, return a diff of meaningful changes between icalendar files</li>
+<li>
+<a href="https://github.com/eventable/vobject/blob/master/vobject/change_tz.py">change_tz</a>: Take an iCalendar file with events in the wrong timezone, change all events or just UTC events into one of the timezones PyICU supports. Requires <a href="https://pypi.python.org/pypi/PyICU/">PyICU</a>.</li>
 </ul>
 
 <h1>
