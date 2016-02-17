@@ -51,7 +51,7 @@
 <pre><code>python setup.py install
 </code></pre>
 
-<p>VObject requires Python 2.7 or higher, along with the <a href="https://pypi.python.org/pypi/python-dateutil/">dateutil 2.4.0</a> and <a href="https://pypi.python.org/pypi/six">six</a> packages.</p>
+<p>VObject requires Python 2.7 or higher, along with the <a href="https://pypi.python.org/pypi/python-dateutil/">dateutil</a> and <a href="https://pypi.python.org/pypi/six">six</a> packages.</p>
 
 <h1>
 <a id="running-tests-" class="anchor" href="#running-tests-" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Running tests <a href="https://travis-ci.org/eventable/vobject"><img src="https://travis-ci.org/eventable/vobject.svg?branch=master" alt="Build Status"></a>
@@ -285,6 +285,22 @@ u'Harris'
 <a id="release-history" class="anchor" href="#release-history" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Release History</h1>
 
 <h3>
+<a id="16-february-2016" class="anchor" href="#16-february-2016" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>16 February 2016</h3>
+
+<p><strong>vobject 0.9.1</strong> released (<a href="https://github.com/eventable/vobject/releases/tag/0.9.1">view</a>).</p>
+
+<p>To install, use <code>pip install vobject</code>, or download the archive and untar, run python setup.py install. Tests can be run via python setup.py test. <a href="https://pypi.python.org/pypi/python-dateutil/">dateutil</a> and <a href="https://pypi.python.org/pypi/six">six</a> are required. Python 2.7 or higher is now required.</p>
+
+<h5>
+<a id="release-notes" class="anchor" href="#release-notes" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Release Notes</h5>
+
+<ul>
+<li>  Removed lock on dateutil version (&gt;=2.4.0 now works)</li>
+</ul>
+
+<hr>
+
+<h3>
 <a id="3-february-2016" class="anchor" href="#3-february-2016" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>3 February 2016</h3>
 
 <p><strong>vobject 0.9.0</strong> released (<a href="https://github.com/eventable/vobject/releases/tag/0.9.0">view</a>).</p>
@@ -292,7 +308,7 @@ u'Harris'
 <p>To install, use <code>pip install vobject</code>, or download the archive and untar, run python setup.py install. Tests can be run via python setup.py test. <a href="https://pypi.python.org/pypi/python-dateutil/">dateutil 2.4.0</a> and <a href="https://pypi.python.org/pypi/six">six</a> are required. Python 2.7 or higher is now required.</p>
 
 <h5>
-<a id="release-notes" class="anchor" href="#release-notes" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Release Notes</h5>
+<a id="release-notes-1" class="anchor" href="#release-notes-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Release Notes</h5>
 
 <ul>
 <li>  Python 3 compatible</li>
@@ -312,7 +328,7 @@ u'Harris'
 <p>To install, use <code>pip install vobject</code>, or download the archive and untar, run python setup.py install. Tests can be run via python setup.py test. <a href="http://labix.org/python-dateutil#head-2f49784d6b27bae60cde1cff6a535663cf87497b">dateutil</a> 1.1 or later is required. Python 2.4 is also required.</p>
 
 <h5>
-<a id="release-notes-1" class="anchor" href="#release-notes-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Release Notes</h5>
+<a id="release-notes-2" class="anchor" href="#release-notes-2" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Release Notes</h5>
 
 <ul>
 <li>  Removed unnecessary ez_setup call from setup.py</li>
@@ -328,7 +344,7 @@ u'Harris'
 <p>To install, use easy_install, or download the archive and untar, run python setup.py install. Tests can be run via python setup.py test. <a href="http://labix.org/python-dateutil#head-2f49784d6b27bae60cde1cff6a535663cf87497b">dateutil</a> 1.1 or later is required. Python 2.4 is also required.</p>
 
 <h5>
-<a id="release-notes-2" class="anchor" href="#release-notes-2" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Release Notes</h5>
+<a id="release-notes-3" class="anchor" href="#release-notes-3" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Release Notes</h5>
 
 <ul>
 <li>  Tweaked change_tz.py to keep it 2.4 compatible</li>
@@ -344,7 +360,7 @@ u'Harris'
 <p>To install, use easy_install, or download the archive and untar, run python setup.py install. Tests can be run via python setup.py test. <a href="http://labix.org/python-dateutil#head-2f49784d6b27bae60cde1cff6a535663cf87497b">dateutil</a> 1.1 or later is required. Python 2.4 is also required.</p>
 
 <h5>
-<a id="release-notes-3" class="anchor" href="#release-notes-3" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Release Notes</h5>
+<a id="release-notes-4" class="anchor" href="#release-notes-4" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Release Notes</h5>
 
 <ul>
 <li>  Change behavior when import a VCALENDAR or VCARD with an older or absent VERSION line, now the most recent behavior (i.e., VCARD 3.0 and iCalendar, VCALENDAR 2.0) is used</li>
@@ -360,7 +376,7 @@ u'Harris'
 <p>To install, use easy_install, or download the archive and untar, run python setup.py install. Tests can be run via python setup.py test. <a href="http://labix.org/python-dateutil#head-2f49784d6b27bae60cde1cff6a535663cf87497b">dateutil</a> 1.1 or later is required. Python 2.4 is also required.</p>
 
 <h5>
-<a id="release-notes-4" class="anchor" href="#release-notes-4" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Release Notes</h5>
+<a id="release-notes-5" class="anchor" href="#release-notes-5" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Release Notes</h5>
 
 <ul>
 <li>  Changed license to Apache 2.0 from Apache 1.1</li>
@@ -378,7 +394,7 @@ u'Harris'
 <p>To install, use easy_install, or download the archive and untar, run python setup.py install. Tests can be run via python setup.py test. <a href="http://labix.org/python-dateutil#head-2f49784d6b27bae60cde1cff6a535663cf87497b">dateutil</a> 1.1 or later is required. Python 2.4 is also required.</p>
 
 <h5>
-<a id="release-notes-5" class="anchor" href="#release-notes-5" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Release Notes</h5>
+<a id="release-notes-6" class="anchor" href="#release-notes-6" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Release Notes</h5>
 
 <ul>
 <li>  Add change_tz script for converting timezones in iCalendar files</li>
@@ -394,7 +410,7 @@ u'Harris'
 <p>To install, use easy_install, or download the archive and untar, run python setup.py install. Tests can be run via python setup.py test. <a href="http://labix.org/python-dateutil#head-2f49784d6b27bae60cde1cff6a535663cf87497b">dateutil</a> 1.1 or later is required. Python 2.4 is also required.</p>
 
 <h5>
-<a id="release-notes-6" class="anchor" href="#release-notes-6" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Release Notes</h5>
+<a id="release-notes-7" class="anchor" href="#release-notes-7" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Release Notes</h5>
 
 <ul>
 <li>  Allow Outlook's technically illegal use of commas in TZIDs</li>
@@ -415,7 +431,7 @@ u'Harris'
 <p>To install, use easy_install, or download the archive and untar, run python setup.py install. Tests can be run via python setup.py test. <a href="http://labix.org/python-dateutil#head-2f49784d6b27bae60cde1cff6a535663cf87497b">dateutil</a> 1.1 or later is required. Python 2.4 is also required.</p>
 
 <h5>
-<a id="release-notes-7" class="anchor" href="#release-notes-7" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Release Notes</h5>
+<a id="release-notes-8" class="anchor" href="#release-notes-8" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Release Notes</h5>
 
 <ul>
 <li>  Fixed <a href="https://bugzilla.osafoundation.org/show_bug.cgi?id=12120">bug 12120</a>, unicode TZIDs were failing to parse.</li>
@@ -431,7 +447,7 @@ u'Harris'
 <p>To install, use easy_install, or download the archive and untar, run python setup.py install. Tests can be run via python setup.py test. <a href="http://labix.org/python-dateutil#head-2f49784d6b27bae60cde1cff6a535663cf87497b">dateutil</a> 1.1 or later is required. Python 2.4 is also required.</p>
 
 <h5>
-<a id="release-notes-8" class="anchor" href="#release-notes-8" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Release Notes</h5>
+<a id="release-notes-9" class="anchor" href="#release-notes-9" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Release Notes</h5>
 
 <ul>
 <li>  Fixed <a href="https://bugzilla.osafoundation.org/show_bug.cgi?id=9814">bug 9814</a>, quoted-printable data wasn't being decoded into unicode, thanks to Ilpo Nyyssönen for the fix.</li>
@@ -448,7 +464,7 @@ u'Harris'
 <p>To install, use easy_install, or download the archive and untar, run python setup.py install. <a href="http://labix.org/python-dateutil#head-2f49784d6b27bae60cde1cff6a535663cf87497b">dateutil</a> 1.1 or later is required. Python 2.4 is also required.</p>
 
 <h5>
-<a id="release-notes-9" class="anchor" href="#release-notes-9" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Release Notes</h5>
+<a id="release-notes-10" class="anchor" href="#release-notes-10" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Release Notes</h5>
 
 <ul>
 <li>  Added VAVAILABILITY support, thanks to the Calendar Server team.</li>
@@ -465,7 +481,7 @@ u'Harris'
 <p>To install, use easy_install, or download the archive and untar, run python setup.py install. <a href="http://labix.org/python-dateutil#head-2f49784d6b27bae60cde1cff6a535663cf87497b">dateutil</a> 1.1 or later is required. Python 2.4 is also required.</p>
 
 <h5>
-<a id="release-notes-10" class="anchor" href="#release-notes-10" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Release Notes</h5>
+<a id="release-notes-11" class="anchor" href="#release-notes-11" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Release Notes</h5>
 
 <ul>
 <li>  Updated to more recent ez_setup, vobject wasn't successfully installing.</li>
@@ -481,7 +497,7 @@ u'Harris'
 <p>To install, use easy_install, or download the archive and untar, run python setup.py install. <a href="http://labix.org/python-dateutil#head-2f49784d6b27bae60cde1cff6a535663cf87497b">dateutil</a> 1.1 or later is required. Python 2.4 is also required.</p>
 
 <h5>
-<a id="release-notes-11" class="anchor" href="#release-notes-11" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Release Notes</h5>
+<a id="release-notes-12" class="anchor" href="#release-notes-12" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Release Notes</h5>
 
 <ul>
 <li>  Tolerate invalid UNTIL values for recurring events</li>
@@ -501,7 +517,7 @@ u'Harris'
 <p>To install, use easy_install, or download the archive and untar, run python setup.py install. <a href="http://labix.org/python-dateutil#head-2f49784d6b27bae60cde1cff6a535663cf87497b">dateutil</a> 1.1 or later is required. Python 2.4 is also required.</p>
 
 <h5>
-<a id="release-notes-12" class="anchor" href="#release-notes-12" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Release Notes</h5>
+<a id="release-notes-13" class="anchor" href="#release-notes-13" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Release Notes</h5>
 
 <ul>
 <li>  Fixed problem with the UNTIL time used when creating a dateutil rruleset.</li>
@@ -517,7 +533,7 @@ u'Harris'
 <p>To install, use easy_install, or download the archive and untar, run python setup.py install. <a href="http://labix.org/python-dateutil#head-2f49784d6b27bae60cde1cff6a535663cf87497b">dateutil</a> 1.1 or later is required. Python 2.4 is also required.</p>
 
 <h5>
-<a id="release-notes-13" class="anchor" href="#release-notes-13" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Release Notes</h5>
+<a id="release-notes-14" class="anchor" href="#release-notes-14" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Release Notes</h5>
 
 <ul>
 <li>  Fixed a problem causing DATE valued RDATEs and EXDATEs to be ignored when interpreting recurrence rules</li>
@@ -534,7 +550,7 @@ u'Harris'
 <p>To install, use easy_install, or download the archive and untar, run python setup.py install. <a href="http://labix.org/python-dateutil#head-2f49784d6b27bae60cde1cff6a535663cf87497b">dateutil</a> 1.1 or later is required. Python 2.4 is also required.</p>
 
 <h5>
-<a id="release-notes-14" class="anchor" href="#release-notes-14" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Release Notes</h5>
+<a id="release-notes-15" class="anchor" href="#release-notes-15" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Release Notes</h5>
 
 <ul>
 <li>  Added an ics_diff module and an ics_diff command line script for comparing similar iCalendar files</li>
@@ -550,7 +566,7 @@ u'Harris'
 <p>To install, use easy_install, or download the archive and untar, run python setup.py install. <a href="http://labix.org/python-dateutil#head-2f49784d6b27bae60cde1cff6a535663cf87497b">dateutil</a> 1.1 or later is required. Python 2.4 is also required.</p>
 
 <h5>
-<a id="release-notes-15" class="anchor" href="#release-notes-15" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Release Notes</h5>
+<a id="release-notes-16" class="anchor" href="#release-notes-16" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Release Notes</h5>
 
 <ul>
 <li>  Added ignoreUnreadable flag to readOne and readComponents</li>
@@ -568,7 +584,7 @@ u'Harris'
 <p>To install, use easy_install, or download the archive and untar, run python setup.py install. <a href="http://labix.org/python-dateutil#head-2f49784d6b27bae60cde1cff6a535663cf87497b">dateutil</a> 1.1 or later is required. Python 2.4 is also required.</p>
 
 <h5>
-<a id="release-notes-16" class="anchor" href="#release-notes-16" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Release Notes</h5>
+<a id="release-notes-17" class="anchor" href="#release-notes-17" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Release Notes</h5>
 
 <ul>
 <li>  Merged in Apple CalendarServer patches as of CalendarServer-r191</li>
@@ -587,7 +603,7 @@ u'Harris'
 <p>To install, use easy_install, or download the archive and untar, run python setup.py install. <a href="http://labix.org/python-dateutil#head-2f49784d6b27bae60cde1cff6a535663cf87497b">dateutil</a> 0.9 or later is required. Python 2.4 is also required.</p>
 
 <h5>
-<a id="release-notes-17" class="anchor" href="#release-notes-17" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Release Notes</h5>
+<a id="release-notes-18" class="anchor" href="#release-notes-18" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Release Notes</h5>
 
 <ul>
 <li>  Added support for PyTZ tzinfo classes.</li>
@@ -603,7 +619,7 @@ u'Harris'
 <p>To install, use easy_install, or download the archive and untar, run python setup.py install. <a href="http://labix.org/python-dateutil#head-2f49784d6b27bae60cde1cff6a535663cf87497b">dateutil</a> 0.9 or later is required. Python 2.4 is also required.</p>
 
 <h5>
-<a id="release-notes-18" class="anchor" href="#release-notes-18" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Release Notes</h5>
+<a id="release-notes-19" class="anchor" href="#release-notes-19" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Release Notes</h5>
 
 <ul>
 <li>  Updated ez_setup.py to use the latest setuptools.</li>
@@ -619,7 +635,7 @@ u'Harris'
 <p>To install, use easy_install, or download the archive and untar, run python setup.py install. <a href="http://labix.org/python-dateutil#head-2f49784d6b27bae60cde1cff6a535663cf87497b">dateutil</a> 0.9 or later is required. Python 2.4 is also required.</p>
 
 <h5>
-<a id="release-notes-19" class="anchor" href="#release-notes-19" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Release Notes</h5>
+<a id="release-notes-20" class="anchor" href="#release-notes-20" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Release Notes</h5>
 
 <ul>
 <li>  When vobject encounters ascii, it now tries utf-8, then utf-16 with either LE or BE byte orders, searching for BEGIN in the decoded string to determine if it's found an encoding match. readOne and readComponents will no longer work on arbitrary Versit style ascii streams unless the optional findBegin flag is set to False</li>
@@ -635,7 +651,7 @@ u'Harris'
 <p>To install, use easy_install, or download the archive and untar, run python setup.py install. <a href="http://labix.org/python-dateutil#head-2f49784d6b27bae60cde1cff6a535663cf87497b">dateutil</a> 0.9 or later is required. Python 2.4 is also required.</p>
 
 <h5>
-<a id="release-notes-20" class="anchor" href="#release-notes-20" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Release Notes</h5>
+<a id="release-notes-21" class="anchor" href="#release-notes-21" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Release Notes</h5>
 
 <ul>
 <li>  Workarounds for common invalid files produced by Apple's iCal and AddressBook</li>
@@ -654,7 +670,7 @@ u'Harris'
 <p>To install, untar the archive, run python setup.py install. <a href="http://labix.org/python-dateutil#head-2f49784d6b27bae60cde1cff6a535663cf87497b">dateutil</a> 0.9 or later is required. Python 2.4 is also required.</p>
 
 <h5>
-<a id="release-notes-21" class="anchor" href="#release-notes-21" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Release Notes</h5>
+<a id="release-notes-22" class="anchor" href="#release-notes-22" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Release Notes</h5>
 
 <ul>
 <li>  Changed API for accessing children and parameters, attributes now return the first child or parameter, not a list. See <a href="usage.html">usage</a> for examples</li>
@@ -674,7 +690,7 @@ u'Harris'
 <p>To install, untar the archive, run python setup.py install. <a href="http://labix.org/python-dateutil#head-2f49784d6b27bae60cde1cff6a535663cf87497b">dateutil</a> 0.9 or later is required. Python 2.4 is also required.</p>
 
 <h5>
-<a id="release-notes-22" class="anchor" href="#release-notes-22" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Release Notes</h5>
+<a id="release-notes-23" class="anchor" href="#release-notes-23" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Release Notes</h5>
 
 <ul>
 <li>  Added VERSION line back into native iCalendar objects</li>
@@ -692,7 +708,7 @@ u'Harris'
 <p>To install, untar the archive, run python setup.py install. <a href="http://labix.org/python-dateutil#head-2f49784d6b27bae60cde1cff6a535663cf87497b">dateutil</a> 0.9 or later is required. Python 2.4 is also required.</p>
 
 <h5>
-<a id="release-notes-23" class="anchor" href="#release-notes-23" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Release Notes</h5>
+<a id="release-notes-24" class="anchor" href="#release-notes-24" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Release Notes</h5>
 
 <ul>
 <li>  Fixed problem with add('duration')</li>
@@ -710,7 +726,7 @@ u'Harris'
 <p>To install, untar the archive, run python setup.py install. <a href="http://labix.org/python-dateutil#head-2f49784d6b27bae60cde1cff6a535663cf87497b">dateutil</a> 0.9 or later is required. Python 2.4 is also required.</p>
 
 <h5>
-<a id="release-notes-24" class="anchor" href="#release-notes-24" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Release Notes</h5>
+<a id="release-notes-25" class="anchor" href="#release-notes-25" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Release Notes</h5>
 
 <ul>
 <li>  Added serialization of arbitrary tzinfo classes as VTIMEZONEs</li>
@@ -729,7 +745,7 @@ u'Harris'
 <p>To install, untar the archive, run python setup.py install. <a href="http://labix.org/python-dateutil#head-2f49784d6b27bae60cde1cff6a535663cf87497b">dateutil</a> 0.9 or later is required. As of this release, Python 2.4 is also required.</p>
 
 <h5>
-<a id="release-notes-25" class="anchor" href="#release-notes-25" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Release Notes</h5>
+<a id="release-notes-26" class="anchor" href="#release-notes-26" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Release Notes</h5>
 
 <ul>
 <li>  Changed parseLine to use regular expression instead of a state machine, reducing parse time dramatically</li>
@@ -745,7 +761,7 @@ u'Harris'
 <p>To install, untar the archive, run python setup.py install. <a href="http://labix.org/python-dateutil#head-2f49784d6b27bae60cde1cff6a535663cf87497b">dateutil</a> 0.9 or later is required. As of this release, Python 2.4 is also required.</p>
 
 <h5>
-<a id="release-notes-26" class="anchor" href="#release-notes-26" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Release Notes</h5>
+<a id="release-notes-27" class="anchor" href="#release-notes-27" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Release Notes</h5>
 
 <ul>
 <li>  Added license and acknowledgements.</li>
@@ -765,7 +781,7 @@ u'Harris'
 <p>patch -R $PYTHONLIB/site-packages/dateutil/tz.py dateutil-0.5-tzoffset-bug.patch</p>
 
 <h5>
-<a id="release-notes-27" class="anchor" href="#release-notes-27" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Release Notes</h5>
+<a id="release-notes-28" class="anchor" href="#release-notes-28" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Release Notes</h5>
 
 <ul>
 <li>  Fixed printing of non-ascii unicode.</li>
@@ -784,7 +800,7 @@ u'Harris'
 <p>patch -R $PYTHONLIB/site-packages/dateutil/tz.py dateutil-0.5-tzoffset-bug.patch</p>
 
 <h5>
-<a id="release-notes-28" class="anchor" href="#release-notes-28" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Release Notes</h5>
+<a id="release-notes-29" class="anchor" href="#release-notes-29" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Release Notes</h5>
 
 <ul>
 <li>  Various bug fixes involving recurrence.</li>
@@ -799,7 +815,7 @@ u'Harris'
 <p><strong>vobject 0.1</strong> released (SVN revision 70)</p>
 
 <h5>
-<a id="release-notes-29" class="anchor" href="#release-notes-29" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Release Notes</h5>
+<a id="release-notes-30" class="anchor" href="#release-notes-30" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Release Notes</h5>
 
 <ul>
 <li>  Parsing all iCalendar files should be working, please <a href="bugs/">file a bug</a> if you can't read one!</li>
