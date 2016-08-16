@@ -1,4 +1,5 @@
 """Definitions and behavior for vCard 3.0"""
+import base64
 
 from . import behavior
 
@@ -147,7 +148,7 @@ class VCardTextBehavior(behavior.Behavior):
         if not line.encoded:
             encoding = getattr(line, 'encoding_param', None)
             if encoding and encoding.upper() == cls.base64string:
-                line.value = line.value.encode('base64').replace('\n', '')
+                line.value = base64.encodestring(line.value).replace('\n', '')
             else:
                 line.value = backslashEscape(line.value)
             line.encoded=True
